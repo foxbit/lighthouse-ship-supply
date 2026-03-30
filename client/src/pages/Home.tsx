@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Anchor, Leaf, Shield, Clock, Zap, Send, Upload, Menu, X, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Anchor, Leaf, Shield, Clock, Zap, Send, Upload, Menu, X, Globe, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -49,8 +49,8 @@ export default function Home() {
               <Mail size={16} />
               <span className="hidden lg:inline">{t.topBar.contact}</span>
             </a>
-            <a href="tel:+5598999999999" className="flex items-center gap-2 hover:text-[#C9A84C] transition">
-              <Phone size={16} />
+            <a href="https://wa.me/5598999756216" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#C9A84C] transition">
+              <MessageCircle size={16} />
               {t.topBar.phone}
             </a>
           </div>
@@ -442,9 +442,10 @@ export default function Home() {
                 comercial@lighthouseship.com.br
               </a>
             </p>
-            <p className="text-gray-400 text-sm">
-              <a href="tel:+5598999999999" className="hover:text-[#C9A84C] transition">
-                +55 (98) 9999-9999
+            <p className="text-gray-400 text-sm flex items-center gap-2">
+              <a href="https://wa.me/5598999756216" target="_blank" rel="noopener noreferrer" className="hover:text-[#C9A84C] transition flex items-center gap-1">
+                <MessageCircle size={16} />
+                {t.topBar.phone}
               </a>
             </p>
           </div>
@@ -466,13 +467,13 @@ export default function Home() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/5598999999999?text=Olá%20Lighthouse%20Ship%20Supply!%20Gostaria%20de%20solicitar%20uma%20cotação."
+        href="https://wa.me/5598999756216?text=Olá%20Lighthouse%20Ship%20Supply!%20Gostaria%20de%20solicitar%20uma%20cotação."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition transform hover:scale-110 z-40"
         title={language === "pt" ? "Emergência? Fale conosco agora" : language === "en" ? "Emergency? Talk to us now" : language === "es" ? "¿Emergencia? Hable con nosotros ahora" : "Urgence? Parlez-nous maintenant"}
       >
-        <Phone size={24} />
+        <MessageCircle size={24} />
       </a>
     </div>
   );
