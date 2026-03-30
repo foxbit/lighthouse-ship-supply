@@ -1,8 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Anchor, Leaf, Shield, Clock, Zap, Send, Upload } from "lucide-react";
+import { Mail, Phone, MapPin, Anchor, Leaf, Shield, Clock, Zap, Send, Upload, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     navio: "",
     agencia: "",
@@ -24,13 +25,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Bar */}
-      <div className="bg-[#0D1B2A] text-white py-3 px-4 text-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex gap-6">
+      {/* Top Bar - Hidden on Mobile */}
+      <div className="hidden md:block bg-[#0D1B2A] text-white py-3 px-4 text-sm">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             <a href="mailto:comercial@lighthouseship.com.br" className="flex items-center gap-2 hover:text-[#C9A84C] transition">
               <Mail size={16} />
-              comercial@lighthouseship.com.br
+              <span className="hidden lg:inline">comercial@lighthouseship.com.br</span>
             </a>
             <a href="tel:+5598999999999" className="flex items-center gap-2 hover:text-[#C9A84C] transition">
               <Phone size={16} />
@@ -45,16 +46,17 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-[#0D1B2A] rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-[#0D1B2A] rounded-full flex items-center justify-center flex-shrink-0">
               <Anchor className="text-[#C9A84C]" size={24} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-[#0D1B2A]">LIGHTHOUSE</h1>
+              <h1 className="text-lg md:text-xl font-bold text-[#0D1B2A]">LIGHTHOUSE</h1>
               <p className="text-xs text-[#C9A84C] font-semibold">Ship Supply</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-8">
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center gap-8">
             <a href="#inicio" className="text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition">Início</a>
             <a href="#quem-somos" className="text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition">Quem Somos</a>
             <a href="#suprimentos" className="text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition">Suprimentos</a>
@@ -62,23 +64,43 @@ export default function Home() {
             <a href="#contato" className="text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition">Contato</a>
             <Button className="bg-[#C9A84C] hover:bg-[#B8941F] text-white font-semibold">Solicitar Cotação</Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-3">
+            <a href="#inicio" className="block text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition py-2">Início</a>
+            <a href="#quem-somos" className="block text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition py-2">Quem Somos</a>
+            <a href="#suprimentos" className="block text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition py-2">Suprimentos</a>
+            <a href="#portos" className="block text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition py-2">Portos</a>
+            <a href="#contato" className="block text-[#1A1A2E] hover:text-[#C9A84C] font-medium transition py-2">Contato</a>
+            <Button className="w-full bg-[#C9A84C] hover:bg-[#B8941F] text-white font-semibold">Solicitar Cotação</Button>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section id="inicio" className="bg-[#0D1B2A] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 gap-12 items-center">
+      <section id="inicio" className="bg-[#0D1B2A] text-white py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <p className="text-[#C9A84C] font-semibold text-sm mb-4">SHIP CHANDLER • SÃO LUÍS, MA</p>
-            <h2 className="text-5xl font-bold mb-6 font-playfair leading-tight">Onde a Rapidez Encontra a Qualidade</h2>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="text-[#C9A84C] font-semibold text-xs md:text-sm mb-4">SHIP CHANDLER • SÃO LUÍS, MA</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 font-playfair leading-tight">Onde a Rapidez Encontra a Qualidade</h2>
+            <p className="text-gray-300 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
               Fornecemos provisões frescas e itens de hotelaria entregues com agilidade máxima. Sua tripulação bem abastecida, sua operação sempre no prazo.
             </p>
-            <div className="flex gap-4">
-              <Button className="bg-[#C9A84C] hover:bg-[#B8941F] text-white px-8 py-6 text-lg font-semibold">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Button className="bg-[#C9A84C] hover:bg-[#B8941F] text-white px-6 md:px-8 py-3 md:py-6 text-base md:text-lg font-semibold w-full sm:w-auto">
                 Solicitar Cotação
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold">
+              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-6 md:px-8 py-3 md:py-6 text-base md:text-lg font-semibold w-full sm:w-auto">
                 Nossos Suprimentos
               </Button>
             </div>
@@ -94,48 +116,48 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-3 gap-12 text-center">
+      <section className="bg-white py-12 md:py-16 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center">
           <div className="flex flex-col items-center">
             <Clock className="text-[#C9A84C] mb-4" size={40} />
-            <h3 className="text-3xl font-bold text-[#0D1B2A] mb-2">24/7</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#0D1B2A] mb-2">24/7</h3>
             <p className="text-gray-600 font-medium">Operações Contínuas</p>
           </div>
           <div className="flex flex-col items-center">
             <Zap className="text-[#C9A84C] mb-4" size={40} />
-            <h3 className="text-3xl font-bold text-[#0D1B2A] mb-2">Pontual</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#0D1B2A] mb-2">Pontual</h3>
             <p className="text-gray-600 font-medium">Entrega Garantida</p>
           </div>
           <div className="flex flex-col items-center">
             <Shield className="text-[#C9A84C] mb-4" size={40} />
-            <h3 className="text-3xl font-bold text-[#0D1B2A] mb-2">Premium</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#0D1B2A] mb-2">Premium</h3>
             <p className="text-gray-600 font-medium">Qualidade Certificada</p>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="quem-somos" className="bg-[#F5F7FA] py-20">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 gap-12 items-center">
+      <section id="quem-somos" className="bg-[#F5F7FA] py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-[#0D1B2A] mb-6 font-playfair">Quem Somos</h2>
-            <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0D1B2A] mb-4 md:mb-6 font-playfair">Quem Somos</h2>
+            <p className="text-gray-700 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
               A <strong>Lighthouse Ship Supply</strong> surge com o propósito de elevar o padrão de abastecimento marítimo. Localizada estrategicamente para atender as demandas portuárias, nossa empresa foca no que é essencial para o bem-estar a bordo: provisões de alta qualidade e itens de hotelaria de primeira linha.
             </p>
-            <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+            <p className="text-gray-700 text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
               Entendemos que a logística de um navio não permite erros. Por isso, baseamos nossa operação em três pilares: <strong>agilidade na resposta, rigorosa seleção de produtos e pontualidade na entrega.</strong>
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Zap className="text-[#C9A84C]" size={20} />
+                <Zap className="text-[#C9A84C] flex-shrink-0" size={20} />
                 <span className="text-gray-700 font-medium">Agilidade na resposta</span>
               </div>
               <div className="flex items-center gap-3">
-                <Shield className="text-[#C9A84C]" size={20} />
+                <Shield className="text-[#C9A84C] flex-shrink-0" size={20} />
                 <span className="text-gray-700 font-medium">Qualidade garantida</span>
               </div>
               <div className="flex items-center gap-3">
-                <Clock className="text-[#C9A84C]" size={20} />
+                <Clock className="text-[#C9A84C] flex-shrink-0" size={20} />
                 <span className="text-gray-700 font-medium">Disponibilidade 24/7</span>
               </div>
             </div>
@@ -154,16 +176,16 @@ export default function Home() {
       </section>
 
       {/* Supplies Section */}
-      <section id="suprimentos" className="bg-white py-20">
+      <section id="suprimentos" className="bg-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-[#0D1B2A] mb-16 font-playfair">Nossos Suprimentos</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0D1B2A] mb-12 md:mb-16 font-playfair">Nossos Suprimentos</h2>
           
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Card 1 */}
-            <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-8 hover:shadow-lg transition">
+            <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition">
               <Leaf className="text-[#C9A84C] mb-4" size={40} />
-              <h3 className="text-2xl font-bold text-[#0D1B2A] mb-4">Provisões Frescas e Congelados</h3>
-              <ul className="text-gray-700 leading-relaxed space-y-2">
+              <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A] mb-4">Provisões Frescas e Congelados</h3>
+              <ul className="text-gray-700 leading-relaxed space-y-2 text-sm md:text-base">
                 <li><strong>Frutas e Vegetais:</strong> Seleção diária de itens da estação</li>
                 <li><strong>Carnes e Aves:</strong> Cortes bovinos, suínos e aves com certificação</li>
                 <li><strong>Peixes e Frutos do Mar:</strong> Opções frescas e congeladas</li>
@@ -172,10 +194,10 @@ export default function Home() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-8 hover:shadow-lg transition">
+            <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition">
               <Upload className="text-[#C9A84C] mb-4" size={40} />
-              <h3 className="text-2xl font-bold text-[#0D1B2A] mb-4">Provisões Secas (Dry Stores)</h3>
-              <ul className="text-gray-700 leading-relaxed space-y-2">
+              <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A] mb-4">Provisões Secas (Dry Stores)</h3>
+              <ul className="text-gray-700 leading-relaxed space-y-2 text-sm md:text-base">
                 <li><strong>Grãos e Farináceos:</strong> Arroz, feijão, massas, farinhas e cereais</li>
                 <li><strong>Enlatados e Conservas:</strong> Vegetais, molhos, óleos e azeites</li>
                 <li><strong>Condimentos e Especiarias:</strong> Essenciais para gastronomia internacional</li>
@@ -184,10 +206,10 @@ export default function Home() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-8 hover:shadow-lg transition">
+            <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition">
               <Shield className="text-[#C9A84C] mb-4" size={40} />
-              <h3 className="text-2xl font-bold text-[#0D1B2A] mb-4">Hotelaria e Cabine</h3>
-              <ul className="text-gray-700 leading-relaxed space-y-2">
+              <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A] mb-4">Hotelaria e Cabine</h3>
+              <ul className="text-gray-700 leading-relaxed space-y-2 text-sm md:text-base">
                 <li><strong>Produtos de Limpeza:</strong> Detergentes, desinfetantes industriais</li>
                 <li><strong>Higiene Pessoal:</strong> Sabonetes, cremes dentais, shampoos</li>
                 <li><strong>Cama e Banho:</strong> Lençóis, toalhas de alta gramatura</li>
@@ -199,68 +221,68 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-[#0D1B2A] text-white py-20">
+      <section className="bg-[#0D1B2A] text-white py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 font-playfair">Por que Escolher a Lighthouse?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16 font-playfair">Por que Escolher a Lighthouse?</h2>
           
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <Zap className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-xl font-bold mb-3">Agilidade</h3>
-              <p className="text-gray-300">Resposta rápida respeitando ETA/ETD da sua embarcação</p>
+              <h3 className="text-lg md:text-xl font-bold mb-3">Agilidade</h3>
+              <p className="text-gray-300 text-sm md:text-base">Resposta rápida respeitando ETA/ETD da sua embarcação</p>
             </div>
             <div className="text-center">
               <Shield className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-xl font-bold mb-3">Qualidade</h3>
-              <p className="text-gray-300">Seleção criteriosa de alimentos frescos e produtos premium</p>
+              <h3 className="text-lg md:text-xl font-bold mb-3">Qualidade</h3>
+              <p className="text-gray-300 text-sm md:text-base">Seleção criteriosa de alimentos frescos e produtos premium</p>
             </div>
             <div className="text-center">
               <Clock className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-xl font-bold mb-3">Disponibilidade</h3>
-              <p className="text-gray-300">Suporte pronto 24/7 para emergências e cotações rápidas</p>
+              <h3 className="text-lg md:text-xl font-bold mb-3">Disponibilidade</h3>
+              <p className="text-gray-300 text-sm md:text-base">Suporte pronto 24/7 para emergências e cotações rápidas</p>
             </div>
             <div className="text-center">
               <Leaf className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-xl font-bold mb-3">Dietas Especiais</h3>
-              <p className="text-gray-300">Atendemos Halal, Vegetariana e outras necessidades</p>
+              <h3 className="text-lg md:text-xl font-bold mb-3">Dietas Especiais</h3>
+              <p className="text-gray-300 text-sm md:text-base">Atendemos Halal, Vegetariana e outras necessidades</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Ports Section */}
-      <section id="portos" className="bg-[#F5F7FA] py-20">
+      <section id="portos" className="bg-[#F5F7FA] py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-[#0D1B2A] mb-16 font-playfair">Portos Atendidos</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0D1B2A] mb-12 md:mb-16 font-playfair">Portos Atendidos</h2>
           
-          <div className="grid grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="bg-white rounded-lg p-6 md:p-8 text-center shadow-md hover:shadow-lg transition">
               <MapPin className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-2xl font-bold text-[#0D1B2A]">Itaqui</h3>
-              <p className="text-gray-600 mt-2">Terminal portuário de São Luís</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A]">Itaqui</h3>
+              <p className="text-gray-600 mt-2 text-sm md:text-base">Terminal portuário de São Luís</p>
             </div>
-            <div className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition">
+            <div className="bg-white rounded-lg p-6 md:p-8 text-center shadow-md hover:shadow-lg transition">
               <MapPin className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-2xl font-bold text-[#0D1B2A]">Ponta da Madeira</h3>
-              <p className="text-gray-600 mt-2">Terminal de minério</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A]">Ponta da Madeira</h3>
+              <p className="text-gray-600 mt-2 text-sm md:text-base">Terminal de minério</p>
             </div>
-            <div className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition">
+            <div className="bg-white rounded-lg p-6 md:p-8 text-center shadow-md hover:shadow-lg transition">
               <MapPin className="text-[#C9A84C] mx-auto mb-4" size={40} />
-              <h3 className="text-2xl font-bold text-[#0D1B2A]">Alumar</h3>
-              <p className="text-gray-600 mt-2">Terminal de alumínio</p>
+              <h3 className="text-xl md:text-2xl font-bold text-[#0D1B2A]">Alumar</h3>
+              <p className="text-gray-600 mt-2 text-sm md:text-base">Terminal de alumínio</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Quote Form Section */}
-      <section id="contato" className="bg-white py-20">
+      <section id="contato" className="bg-white py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-[#0D1B2A] mb-4 font-playfair">Solicite uma Cotação</h2>
-          <p className="text-center text-gray-600 mb-12">Preencha o formulário abaixo e nossa equipe entrará em contato em até 1 hora</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0D1B2A] mb-4 font-playfair">Solicite uma Cotação</h2>
+          <p className="text-center text-gray-600 mb-8 md:mb-12 text-sm md:text-base">Preencha o formulário abaixo e nossa equipe entrará em contato em até 1 hora</p>
           
-          <form onSubmit={handleSubmit} className="bg-[#F5F7FA] rounded-lg p-8 space-y-6">
-            <div className="grid grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="bg-[#F5F7FA] rounded-lg p-6 md:p-8 space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-[#0D1B2A] mb-2">Nome do Navio / IMO</label>
                 <input
@@ -329,8 +351,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0D1B2A] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-4 gap-12">
+      <footer className="bg-[#0D1B2A] text-white py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Anchor className="text-[#C9A84C]" size={28} />
@@ -368,14 +390,14 @@ export default function Home() {
           <div>
             <h4 className="font-bold text-[#C9A84C] mb-4">Redes Sociais</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition">LinkedIn</a>
-              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition">Instagram</a>
-              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition">WhatsApp</a>
+              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition text-sm">LinkedIn</a>
+              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition text-sm">Instagram</a>
+              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition text-sm">WhatsApp</a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
+        <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
           <p>&copy; 2024 Lighthouse Ship Supply. Todos os direitos reservados.</p>
         </div>
       </footer>
