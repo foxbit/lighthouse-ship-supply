@@ -107,7 +107,7 @@ export default function Home() {
           </div>
           <div className="rounded-lg overflow-hidden shadow-2xl">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028518339/6zvZhDvRRWjir6mmFofA9R/hero-lighthouse-truck-iweAZocaQGYxuef6evzoL7.webp"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028518339/6zvZhDvRRWjir6mmFofA9R/1774914654334_b722d74e.png"
               alt="Caminhão Lighthouse Ship Supply no Porto"
               className="w-full h-full object-cover"
             />
