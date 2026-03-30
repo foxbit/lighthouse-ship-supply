@@ -85,8 +85,8 @@ export default function Home() {
           </div>
           <div className="rounded-lg overflow-hidden shadow-2xl">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028518339/6zvZhDvRRWjir6mmFofA9R/hero-fresh-food-PLSZeXGaU23hQGRiUwWC64.webp"
-              alt="Provisões frescas"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028518339/6zvZhDvRRWjir6mmFofA9R/hero-lighthouse-truck-iweAZocaQGYxuef6evzoL7.webp"
+              alt="Caminhão Lighthouse Ship Supply no Porto"
               className="w-full h-full object-cover"
             />
           </div>
@@ -163,27 +163,36 @@ export default function Home() {
             <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-8 hover:shadow-lg transition">
               <Leaf className="text-[#C9A84C] mb-4" size={40} />
               <h3 className="text-2xl font-bold text-[#0D1B2A] mb-4">Provisões Frescas e Congelados</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Frutas e vegetais selecionados diariamente, carnes e aves com certificação de qualidade, peixes e frutos do mar frescos, laticínios e ovos com controle rigoroso de validade.
-              </p>
+              <ul className="text-gray-700 leading-relaxed space-y-2">
+                <li><strong>Frutas e Vegetais:</strong> Seleção diária de itens da estação</li>
+                <li><strong>Carnes e Aves:</strong> Cortes bovinos, suínos e aves com certificação</li>
+                <li><strong>Peixes e Frutos do Mar:</strong> Opções frescas e congeladas</li>
+                <li><strong>Laticínios e Ovos:</strong> Leite, queijos, iogurtes e ovos frescos</li>
+              </ul>
             </div>
 
             {/* Card 2 */}
             <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-8 hover:shadow-lg transition">
               <Upload className="text-[#C9A84C] mb-4" size={40} />
               <h3 className="text-2xl font-bold text-[#0D1B2A] mb-4">Provisões Secas (Dry Stores)</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Grãos e farináceos, enlatados e conservas, condimentos e especiarias, bebidas variadas. Um estoque diversificado para atender a diferentes paladares em longas viagens.
-              </p>
+              <ul className="text-gray-700 leading-relaxed space-y-2">
+                <li><strong>Grãos e Farináceos:</strong> Arroz, feijão, massas, farinhas e cereais</li>
+                <li><strong>Enlatados e Conservas:</strong> Vegetais, molhos, óleos e azeites</li>
+                <li><strong>Condimentos e Especiarias:</strong> Essenciais para gastronomia internacional</li>
+                <li><strong>Bebidas:</strong> Água mineral, sucos, café e chás</li>
+              </ul>
             </div>
 
             {/* Card 3 */}
             <div className="bg-white border-t-4 border-[#C9A84C] rounded-lg shadow-md p-8 hover:shadow-lg transition">
               <Shield className="text-[#C9A84C] mb-4" size={40} />
               <h3 className="text-2xl font-bold text-[#0D1B2A] mb-4">Hotelaria e Cabine</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Produtos de limpeza industriais, higiene pessoal, cama e banho com alta gramatura, descartáveis. Tudo necessário para manter o ambiente limpo e organizado.
-              </p>
+              <ul className="text-gray-700 leading-relaxed space-y-2">
+                <li><strong>Produtos de Limpeza:</strong> Detergentes, desinfetantes industriais</li>
+                <li><strong>Higiene Pessoal:</strong> Sabonetes, cremes dentais, shampoos</li>
+                <li><strong>Cama e Banho:</strong> Lençóis, toalhas de alta gramatura</li>
+                <li><strong>Descartáveis:</strong> Copos, guardanapos e embalagens</li>
+              </ul>
             </div>
           </div>
         </div>
