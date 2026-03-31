@@ -177,7 +177,7 @@ export default function Home() {
           </div>
           <div className="rounded-lg overflow-hidden shadow-2xl">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028518339/6zvZhDvRRWjir6mmFofA9R/1774914654334_b722d74e.png"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028518339/6zvZhDvRRWjir6mmFofA9R/1774914654334(1)(1)_a5fd9019.png"
               alt={t.hero.title}
               className="w-full h-full object-cover"
             />
