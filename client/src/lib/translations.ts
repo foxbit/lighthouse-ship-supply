@@ -99,12 +99,12 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "Elevando o padrão de abastecimento marítimo desde 2024.",
+      tagline: "Elevando o padrão de abastecimento marítimo.",
       locationTitle: "Localização",
       address: "Rua dos Nobres<br />São Luís, MA<br />Brasil",
       contactTitle: "Contato",
       socialTitle: "Redes Sociais",
-      copyright: "&copy; 2024 Lighthouse Ship Supply. Todos os direitos reservados.",
+      copyright: "&copy; Lighthouse Ship Supply. Todos os direitos reservados.",
       linkedin: "LinkedIn",
       instagram: "Instagram",
       whatsapp: "WhatsApp",
@@ -210,12 +210,12 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "Raising the standard of maritime supply since 2024.",
+      tagline: "Raising the standard of maritime supply.",
       locationTitle: "Location",
       address: "Rua dos Nobres<br />São Luís, MA<br />Brazil",
       contactTitle: "Contact",
       socialTitle: "Social Media",
-      copyright: "&copy; 2024 Lighthouse Ship Supply. All rights reserved.",
+      copyright: "&copy; Lighthouse Ship Supply. All rights reserved.",
       linkedin: "LinkedIn",
       instagram: "Instagram",
       whatsapp: "WhatsApp",
@@ -321,12 +321,12 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "Elevando el estándar del suministro marítimo desde 2024.",
+      tagline: "Elevando el estándar del suministro marítimo.",
       locationTitle: "Ubicación",
       address: "Rua dos Nobres<br />São Luís, MA<br />Brasil",
       contactTitle: "Contacto",
       socialTitle: "Redes Sociales",
-      copyright: "&copy; 2024 Lighthouse Ship Supply. Todos los derechos reservados.",
+      copyright: "&copy; Lighthouse Ship Supply. Todos los derechos reservados.",
       linkedin: "LinkedIn",
       instagram: "Instagram",
       whatsapp: "WhatsApp",
@@ -432,12 +432,12 @@ export const translations = {
     },
     // Footer
     footer: {
-      tagline: "Élevant la norme de l'approvisionnement maritime depuis 2024.",
+      tagline: "Élevant la norme de l'approvisionnement maritime.",
       locationTitle: "Localisation",
       address: "Rua dos Nobres<br />São Luís, MA<br />Brésil",
       contactTitle: "Contact",
       socialTitle: "Réseaux Sociaux",
-      copyright: "&copy; 2024 Lighthouse Ship Supply. Tous droits réservés.",
+      copyright: "&copy; Lighthouse Ship Supply. Tous droits réservés.",
       linkedin: "LinkedIn",
       instagram: "Instagram",
       whatsapp: "WhatsApp",
