@@ -3,7 +3,7 @@ export const translations = {
     // Top Bar
     topBar: {
       contact: "comercial@lighthouseship.com.br",
-      phone: "+55 98 99975.6216",
+      phone: "(98) 98597.7557",
       support: "Atendimento 24/7",
     },
     // Navbar
@@ -114,7 +114,7 @@ export const translations = {
     // Top Bar
     topBar: {
       contact: "commercial@lighthouseship.com.br",
-      phone: "+55 98 99975.6216",
+      phone: "(98) 98597.7557",
       support: "24/7 Support",
     },
     // Navbar
@@ -225,7 +225,7 @@ export const translations = {
     // Top Bar
     topBar: {
       contact: "comercial@lighthouseship.com.br",
-      phone: "+55 98 99975.6216",
+      phone: "(98) 98597.7557",
       support: "Atención 24/7",
     },
     // Navbar
@@ -336,7 +336,7 @@ export const translations = {
     // Top Bar
     topBar: {
       contact: "commercial@lighthouseship.com.br",
-      phone: "+55 98 99975.6216",
+      phone: "(98) 98597.7557",
       support: "Support 24/7",
     },
     // Navbar
