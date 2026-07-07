@@ -390,7 +390,7 @@ export default function Home() {
               <div className="relative w-full max-w-sm">
                 {/* Screenshot 1 - Cart */}
                 <img 
-                  src="/manus-storage/Capturadetelade2026-07-0621-23-04_c28d128a.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028518339/VmPFreFKjNQSaCck.png" 
                   alt="Shopping Cart" 
                   className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C] animate-bounce" 
                   style={{
@@ -400,7 +400,7 @@ export default function Home() {
                 />
                 {/* Screenshot 2 - Catalog */}
                 <img 
-                  src="/manus-storage/Capturadetelade2026-07-0621-22-09_7cefbc2d.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028518339/pjbSLKWsgZkSSCjy.png" 
                   alt="Product Catalog" 
                   className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C] absolute top-0 left-0 animate-pulse" 
                   style={{
