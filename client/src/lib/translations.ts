@@ -100,8 +100,10 @@ export const translations = {
     // Footer
     footer: {
       tagline: "Elevando o padrão de abastecimento marítimo.",
-      locationTitle: "Localização",
-      address: "Rua dos Nobres<br />São Luís, MA<br />Brasil",
+      company: "LIGHTHOUSE SHIP SUPPLY LTDA",
+      cnpj: "CNPJ: 65.338.529/0001-65",
+      locationTitle: "Endereço",
+      address: "R Duque Bacelar, Nº 3 - Lote Recanto dos Nobres<br />Recanto dos Nobres, São Luís, MA 65.074-253<br />Brasil",
       contactTitle: "Contato",
       copyright: "&copy; Lighthouse Ship Supply. Todos os direitos reservados.",
     },
@@ -207,8 +209,10 @@ export const translations = {
     // Footer
     footer: {
       tagline: "Raising the standard of maritime supply.",
-      locationTitle: "Location",
-      address: "Rua dos Nobres<br />São Luís, MA<br />Brazil",
+      company: "LIGHTHOUSE SHIP SUPPLY LTDA",
+      cnpj: "CNPJ: 65.338.529/0001-65",
+      locationTitle: "Address",
+      address: "R Duque Bacelar, No. 3 - Lote Recanto dos Nobres<br />Recanto dos Nobres, São Luís, MA 65.074-253<br />Brazil",
       contactTitle: "Contact",
       copyright: "&copy; Lighthouse Ship Supply. All rights reserved.",
     },
@@ -314,8 +318,10 @@ export const translations = {
     // Footer
     footer: {
       tagline: "Elevando el estándar del suministro marítimo.",
-      locationTitle: "Ubicación",
-      address: "Rua dos Nobres<br />São Luís, MA<br />Brasil",
+      company: "LIGHTHOUSE SHIP SUPPLY LTDA",
+      cnpj: "CNPJ: 65.338.529/0001-65",
+      locationTitle: "Dirección",
+      address: "R Duque Bacelar, Nº 3 - Lote Recanto dos Nobres<br />Recanto dos Nobres, São Luís, MA 65.074-253<br />Brasil",
       contactTitle: "Contacto",
       copyright: "&copy; Lighthouse Ship Supply. Todos los derechos reservados.",
     },
@@ -421,8 +427,10 @@ export const translations = {
     // Footer
     footer: {
       tagline: "Élevant la norme de l'approvisionnement maritime.",
-      locationTitle: "Localisation",
-      address: "Rua dos Nobres<br />São Luís, MA<br />Brésil",
+      company: "LIGHTHOUSE SHIP SUPPLY LTDA",
+      cnpj: "CNPJ: 65.338.529/0001-65",
+      locationTitle: "Adresse",
+      address: "R Duque Bacelar, Nº 3 - Lote Recanto dos Nobres<br />Recanto dos Nobres, São Luís, MA 65.074-253<br />Brésil",
       contactTitle: "Contact",
       copyright: "&copy; Lighthouse Ship Supply. Tous droits réservés.",
     },
