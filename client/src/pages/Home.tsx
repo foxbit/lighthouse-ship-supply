@@ -450,14 +450,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
-            <h4 className="font-bold text-[#C9A84C] mb-4">{t.footer.socialTitle}</h4>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition text-sm">{t.footer.linkedin}</a>
-              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition text-sm">{t.footer.instagram}</a>
-              <a href="#" className="text-gray-400 hover:text-[#C9A84C] transition text-sm">{t.footer.whatsapp}</a>
-            </div>
-          </div>
+
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
