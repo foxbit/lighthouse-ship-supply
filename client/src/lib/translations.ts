@@ -2,7 +2,7 @@ export const translations = {
   pt: {
     // Top Bar
     topBar: {
-      contact: "comercial@lighthouseship.com.br",
+      contact: "contact@lighthouseshipsupply.com.br",
       phone: "(98) 98597.7557",
       support: "Atendimento 24/7",
     },
@@ -113,7 +113,7 @@ export const translations = {
   en: {
     // Top Bar
     topBar: {
-      contact: "commercial@lighthouseship.com.br",
+      contact: "contact@lighthouseshipsupply.com.br",
       phone: "(98) 98597.7557",
       support: "24/7 Support",
     },
@@ -224,7 +224,7 @@ export const translations = {
   es: {
     // Top Bar
     topBar: {
-      contact: "comercial@lighthouseship.com.br",
+      contact: "contact@lighthouseshipsupply.com.br",
       phone: "(98) 98597.7557",
       support: "Atención 24/7",
     },
@@ -335,7 +335,7 @@ export const translations = {
   fr: {
     // Top Bar
     topBar: {
-      contact: "commercial@lighthouseship.com.br",
+      contact: "contact@lighthouseshipsupply.com.br",
       phone: "(98) 98597.7557",
       support: "Support 24/7",
     },
