@@ -385,29 +385,14 @@ export default function Home() {
               </a>
             </div>
             
-            {/* Right Screenshots - Animated */}
+            {/* Right Screenshots - Static */}
             <div className="relative h-96 md:h-full flex items-center justify-center">
               <div className="relative w-full max-w-sm">
                 {/* Screenshot 1 - Cart */}
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028518339/VmPFreFKjNQSaCck.png" 
                   alt="Shopping Cart" 
-                  className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C] animate-bounce" 
-                  style={{
-                    animationDelay: '0s',
-                    animationDuration: '3s',
-                  }}
-                />
-                {/* Screenshot 2 - Catalog */}
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028518339/pjbSLKWsgZkSSCjy.png" 
-                  alt="Product Catalog" 
-                  className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C] absolute top-0 left-0 animate-pulse" 
-                  style={{
-                    animationDelay: '1.5s',
-                    animationDuration: '3s',
-                    opacity: 0.7,
-                  }}
+                  className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C]" 
                 />
               </div>
             </div>
@@ -415,80 +400,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quote Form Section */}
-      <section id="contato" className="bg-white py-12 md:py-20">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0D1B2A] mb-4 font-playfair">{t.form.title}</h2>
-          <p className="text-center text-gray-600 mb-8 md:mb-12 text-sm md:text-base">{t.form.description}</p>
-          
-          <form onSubmit={handleSubmit} className="bg-[#F5F7FA] rounded-lg p-6 md:p-8 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold text-[#0D1B2A] mb-2">{t.form.shipLabel}</label>
-                <input
-                  type="text"
-                  name="navio"
-                  value={formData.navio}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#C9A84C] focus:ring-2 focus:ring-[#C9A84C]/20"
-                  placeholder={t.form.shipPlaceholder}
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-[#0D1B2A] mb-2">{t.form.agencyLabel}</label>
-                <input
-                  type="text"
-                  name="agencia"
-                  value={formData.agencia}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#C9A84C] focus:ring-2 focus:ring-[#C9A84C]/20"
-                  placeholder={t.form.agencyPlaceholder}
-                />
-              </div>
-            </div>
 
-            <div>
-              <label className="block text-sm font-semibold text-[#0D1B2A] mb-2">{t.form.etaLabel}</label>
-              <input
-                type="datetime-local"
-                name="eta"
-                value={formData.eta}
-                onChange={handleInputChange}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#C9A84C] focus:ring-2 focus:ring-[#C9A84C]/20"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-[#0D1B2A] mb-2">{t.form.messageLabel}</label>
-              <textarea
-                name="mensagem"
-                value={formData.mensagem}
-                onChange={handleInputChange}
-                required
-                rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#C9A84C] focus:ring-2 focus:ring-[#C9A84C]/20"
-                placeholder={t.form.messagePlaceholder}
-              />
-            </div>
-
-            <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-[#C9A84C] transition cursor-pointer">
-              <Upload className="mx-auto mb-2 text-gray-400" size={24} />
-              <p className="text-sm text-gray-600">{t.form.fileLabel}</p>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[#C9A84C] hover:bg-[#B8941F] text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2"
-            >
-              <Send size={20} />
-              {t.form.submitBtn}
-            </button>
-          </form>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-[#0D1B2A] text-white py-12 md:py-16">
