@@ -341,6 +341,80 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Order System Section */}
+      <section id="sistema-pedidos" className="bg-gradient-to-r from-[#0D1B2A] to-[#1a2a3a] py-12 md:py-20 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-playfair">{t.orderSystem.title}</h2>
+              <p className="text-gray-300 mb-8 text-sm md:text-base leading-relaxed">{t.orderSystem.description}</p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#C9A84C] flex items-center justify-center mt-1">
+                    <span className="text-[#0D1B2A] text-sm font-bold">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#C9A84C] mb-1">{t.orderSystem.feature1}</h3>
+                    <p className="text-gray-400 text-sm">{t.orderSystem.feature1Desc}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#C9A84C] flex items-center justify-center mt-1">
+                    <span className="text-[#0D1B2A] text-sm font-bold">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#C9A84C] mb-1">{t.orderSystem.feature2}</h3>
+                    <p className="text-gray-400 text-sm">{t.orderSystem.feature2Desc}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#C9A84C] flex items-center justify-center mt-1">
+                    <span className="text-[#0D1B2A] text-sm font-bold">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#C9A84C] mb-1">{t.orderSystem.feature3}</h3>
+                    <p className="text-gray-400 text-sm">{t.orderSystem.feature3Desc}</p>
+                  </div>
+                </div>
+              </div>
+              
+              <a href="https://lighthouse-order-hub.lovable.app/" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C9A84C] text-[#0D1B2A] px-8 py-3 rounded-lg font-semibold hover:bg-[#D4B35F] transition transform hover:scale-105">
+                {t.orderSystem.cta}
+              </a>
+            </div>
+            
+            {/* Right Screenshots - Animated */}
+            <div className="relative h-96 md:h-full flex items-center justify-center">
+              <div className="relative w-full max-w-sm">
+                {/* Screenshot 1 - Cart */}
+                <img 
+                  src="/manus-storage/Capturadetelade2026-07-0621-23-04_c28d128a.png" 
+                  alt="Shopping Cart" 
+                  className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C] animate-bounce" 
+                  style={{
+                    animationDelay: '0s',
+                    animationDuration: '3s',
+                  }}
+                />
+                {/* Screenshot 2 - Catalog */}
+                <img 
+                  src="/manus-storage/Capturadetelade2026-07-0621-22-09_7cefbc2d.png" 
+                  alt="Product Catalog" 
+                  className="w-full rounded-lg shadow-2xl border-4 border-[#C9A84C] absolute top-0 left-0 animate-pulse" 
+                  style={{
+                    animationDelay: '1.5s',
+                    animationDuration: '3s',
+                    opacity: 0.7,
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Quote Form Section */}
       <section id="contato" className="bg-white py-12 md:py-20">
         <div className="max-w-3xl mx-auto px-4">

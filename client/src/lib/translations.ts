@@ -97,6 +97,18 @@ export const translations = {
       fileLabel: "Anexar lista de suprimentos (opcional)",
       submitBtn: "Enviar Cotação",
     },
+    // Order System
+    orderSystem: {
+      title: "Sistema de Pedidos Online",
+      description: "Gerencie suas compras com facilidade através do nosso sistema completo de pedidos. Catálogo completo, carrinho inteligente e cotações em tempo real.",
+      cta: "Acessar Sistema de Pedidos",
+      feature1: "Catálogo Completo",
+      feature1Desc: "Navegue por todos os nossos suprimentos com filtros inteligentes",
+      feature2: "Carrinho Inteligente",
+      feature2Desc: "Adicione produtos e gerencie suas compras facilmente",
+      feature3: "Cotações em Tempo Real",
+      feature3Desc: "Receba cotações instantâneas e precisas para seus pedidos",
+    },
     // Footer
     footer: {
       tagline: "Elevando o padrão de abastecimento marítimo.",
@@ -205,6 +217,18 @@ export const translations = {
       messagePlaceholder: "Describe your needed supplies...",
       fileLabel: "Attach supplies list (optional)",
       submitBtn: "Send Quote",
+    },
+    // Order System
+    orderSystem: {
+      title: "Online Order System",
+      description: "Manage your purchases easily through our complete order system. Full catalog, smart cart and real-time quotes.",
+      cta: "Access Order System",
+      feature1: "Complete Catalog",
+      feature1Desc: "Browse all our supplies with intelligent filters",
+      feature2: "Smart Cart",
+      feature2Desc: "Add products and manage your purchases easily",
+      feature3: "Real-Time Quotes",
+      feature3Desc: "Receive instant and accurate quotes for your orders",
     },
     // Footer
     footer: {
@@ -315,6 +339,18 @@ export const translations = {
       fileLabel: "Adjuntar lista de suministros (opcional)",
       submitBtn: "Enviar Cotización",
     },
+    // Order System
+    orderSystem: {
+      title: "Sistema de Pedidos en Línea",
+      description: "Gestione sus compras fácilmente a través de nuestro sistema de pedidos completo. Catálogo completo, carrito inteligente y cotizaciones en tiempo real.",
+      cta: "Acceder al Sistema de Pedidos",
+      feature1: "Catálogo Completo",
+      feature1Desc: "Explore todos nuestros suministros con filtros inteligentes",
+      feature2: "Carrito Inteligente",
+      feature2Desc: "Agregue productos y gestione sus compras fácilmente",
+      feature3: "Cotizaciones en Tiempo Real",
+      feature3Desc: "Reciba cotizaciones instantáneas y precisas para sus pedidos",
+    },
     // Footer
     footer: {
       tagline: "Elevando el estándar del suministro marítimo.",
@@ -423,6 +459,18 @@ export const translations = {
       messagePlaceholder: "Décrivez vos fournitures nécessaires...",
       fileLabel: "Joindre la liste des fournitures (optionnel)",
       submitBtn: "Envoyer le Devis",
+    },
+    // Order System
+    orderSystem: {
+      title: "Système de Commande en Ligne",
+      description: "Gérez vos achats facilement grâce à notre système de commande complet. Catalogue complet, panier intelligent et devis en temps réel.",
+      cta: "Accéder au Système de Commande",
+      feature1: "Catalogue Complet",
+      feature1Desc: "Parcourez tous nos fournitures avec des filtres intelligents",
+      feature2: "Panier Intelligent",
+      feature2Desc: "Ajoutez des produits et gérez vos achats facilement",
+      feature3: "Devis en Temps Réel",
+      feature3Desc: "Recevez des devis instantanés et précis pour vos commandes",
     },
     // Footer
     footer: {
